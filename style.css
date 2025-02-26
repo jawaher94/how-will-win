@@ -1,0 +1,207 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #1a1a1a;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.game-container {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    background: linear-gradient(to bottom, #003366, #000033);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.prizes-container {
+    width: 20%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+#prizes-list {
+    list-style: none;
+    padding: 0;
+}
+
+.prize {
+    padding: 10px;
+    background-color: #333;
+    margin: 5px 0;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.current-prize {
+    background-color: gold;
+    font-weight: bold;
+    color: black;
+}
+
+.question-container {
+    width: 80%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lifelines {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.lifelines button {
+    font-size: 16px;
+    padding: 10px 15px;
+    background-color: #ffcc00;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.lifelines button:disabled {
+    background-color: #888;
+    cursor: not-allowed;
+}
+
+.timer-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: gold;
+    margin: 10px auto;
+    border: 2px solid gold;
+    box-shadow: 0 0 10px gold;
+}
+
+.answers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+}
+
+.answers button {
+    position: relative;
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    text-align: right;
+}
+
+.answer-number {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: gold;
+    font-weight: bold;
+}
+
+.selected {
+    background-color: gold !important;
+    animation: pulse 0.5s infinite alternate;
+}
+
+.correct {
+    background-color: green !important;
+}
+
+.wrong {
+    background-color: red !important;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1); }
+}
+
+#message-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    font-size: 24px;
+    display: none;
+    text-align: center;
+}
+
+#message-popup button {
+    background-color: gold;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#play-music {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: gold;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+#play-music:hover {
+    transform: scale(1.1);
+}
+
+#play-music:active {
+    transform: scale(0.95);
+}
+#resume-game {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #4CAF50; /* لون أخضر */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#resume-game:hover {
+    background-color: #45a049; /* لون أخضر داكن عند التحويم */
+}

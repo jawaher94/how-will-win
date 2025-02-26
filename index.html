@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>من سيربح المليون</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="game-container">
+        <div class="prizes-container">
+            <ul id="prizes-list">
+                <li class="prize">1,000,000</li>
+                <li class="prize">500,000</li>
+                <li class="prize">250,000</li>
+                <li class="prize">125,000</li>
+                <li class="prize">64,000</li>
+                <li class="prize">32,000</li>
+                <li class="prize">16,000</li>
+                <li class="prize">8,000</li>
+                <li class="prize">4,000</li>
+                <li class="prize">2,000</li>
+                <li class="prize">1,000</li>
+                <li class="prize">500</li>
+                <li class="prize">300</li>
+                <li class="prize">200</li>
+                <li class="prize current-prize">100</li>
+            </ul>
+        </div>
+
+        <div class="question-container">
+            <h2 id="question-text">السؤال هنا...</h2>
+            <div class="lifelines">
+                <button onclick="useFiftyFifty()">50:50</button>
+                <button onclick="askAudience()"> 👥</button>
+                <button onclick="callFriend()">📞 </button>
+            </div>
+            <div class="timer-circle">
+                <span id="timer">30</span>
+            </div>
+            <div class="answers">
+                <button class="answer" onclick="checkAnswer(0)">إجابة 1</button>
+                <button class="answer" onclick="checkAnswer(1)">إجابة 2</button>
+                <button class="answer" onclick="checkAnswer(2)">إجابة 3</button>
+                <button class="answer" onclick="checkAnswer(3)">إجابة 4</button>
+            </div>
+           
+            <button id="pause-resume-timer" onclick="toggleTimer()">⏸  </button>
+        </div>
+    </div>
+
+    <div id="message-popup" class="hidden"></div>
+    <button id="play-music" onclick="playBackgroundMusic()">تشغيل الموسيقى</button>
+    <script src="script.js"></script>
+</body>
+</html>
